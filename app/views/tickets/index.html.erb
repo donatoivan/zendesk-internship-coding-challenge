@@ -8,3 +8,7 @@
 <div><%= ticket['description'] %></div>
 <%= link_to "Ticket", ticket_path(ticket['id']) %>
 <% end %>
+
+<% if @response['next_page'] != nil %>
+  <%= link_to "Next page", paginate_path(2) %>
+<% end %>
