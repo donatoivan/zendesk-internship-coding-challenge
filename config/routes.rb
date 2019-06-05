@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :tickets, only: [:index, :show]
 
   get '/tickets/pages/:id', to: 'tickets#paginate', as: 'paginate'
-  root 'tickets#paginate', {id: 1}
+  root 'home#index'
 end

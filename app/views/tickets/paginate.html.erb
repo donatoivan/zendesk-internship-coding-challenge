@@ -9,11 +9,11 @@
 <%= link_to "Ticket", ticket_path(ticket['id']) %>
 <% end %>
 
-<% if @response['previous_page'] == nil%>
-  <%= link_to "Next page", paginate_path(@response_for_page + 1)  %>
+<% if @response['previous_page'] == nil %>
+  <%= link_to "Next page", paginate_path(@page_number + 1)  %>
 <% elsif  @response['next_page'] == nil %>
-  <%= link_to "Previous Page", paginate_path(@response_for_page - 1) %>
+  <%= link_to "Previous Page", paginate_path(@page_number - 1) %>
 <% else %>
-  <%= link_to "Previous Page", paginate_path(@response_for_page - 1)%>
-  <%= link_to "Next page" , paginate_path(@response_for_page + 1)  %>
+  <%= link_to "Previous Page", paginate_path(@page_number - 1)%>
+  <%= link_to "Next page" , paginate_path(@page_number + 1)  %>
 <% end %>
