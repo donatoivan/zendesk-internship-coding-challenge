@@ -4,7 +4,11 @@ class TicketsController < ApplicationController
               :password => Rails.application.credentials.zendesk_api[:password]}
     @response = HTTParty.get("https://donatoivan.zendesk.com/api/v2/tickets.json?per_page=25",
                       :basic_auth => @auth)
-    @tickets = @response.parsed_response["tickets"]
+    if (@response.parsed_response['tickets'] == nil || @response.parsed_response["error"] == "Couldn't authenticate you")
+      render :error
+    else
+      @tickets = @response.parsed_response["tickets"]
+    end
   end
 
   def show
