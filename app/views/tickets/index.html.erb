@@ -1,0 +1,10 @@
+<h1>Tickets</h1>
+
+<% @tickets.each do |ticket| %>
+<div><%= ticket['id'] %></div>
+<div><%= ticket['created_at'] %></div>
+<div><%= ticket['updated_at'] %></div>
+<div><%= ticket['subject'] %></div>
+<div><%= ticket['description'] %></div>
+<%= link_to "Ticket", ticket_path(ticket['id']) %>
+<% end %>
