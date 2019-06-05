@@ -38,7 +38,7 @@ describe "API testing" , :type => :api do
   end
 
   it "last ticket page check" do
-    response = HTTParty.get("https://donatoivasdasdan.zendesk.com/api/v2/tickets.json?per_page=25",
+    response = HTTParty.get("https://donatoivan.zendesk.com/api/v2/tickets.json?page=5&per_page=25",
       :basic_auth => @auth)
     expect(response.parsed_response['next_page']).to eql(nil)
   end
