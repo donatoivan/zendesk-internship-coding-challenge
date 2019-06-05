@@ -2,8 +2,8 @@
 
 
 <div><%= @ticket['id'] %></div>
-<div><%= @ticket['created_at'] %></div>
-<div><%= @ticket['updated_at'] %></div>
+<div><%= ticket['created_at'].split("T")[0] %></div>
+<div><%= ticket['created_at'].split("T")[1].split("Z")[0] %></div>
 <div><%= @ticket['subject'] %></div>
 <div><%= @ticket['description'] %></div>
 
