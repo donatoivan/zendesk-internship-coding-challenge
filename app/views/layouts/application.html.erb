@@ -11,7 +11,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class= <%=render partial: "layouts/background" %> >
+  <%# class= <%= render partial: "layouts/background" > %>
+  <body>
     <%= yield %>
   </body>
 </html>

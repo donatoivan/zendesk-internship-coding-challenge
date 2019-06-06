@@ -1,19 +1,21 @@
-<h1>Tickets</h1>
+<div class="tickets-container <%= render partial: "layouts/background" %>">
+  <h1>Tickets</h1>
 
-<% @tickets.each do |ticket| %>
-<div><%= ticket['id'] %></div>
-<div><%= ticket['created_at'].split("T")[0] %></div>
-<div><%= ticket['created_at'].split("T")[1].split("Z")[0] %></div>
-<div><%= ticket['subject'] %></div>
-<div><%= ticket['description'] %></div>
-<%= link_to "Ticket", ticket_path(ticket['id']) %>
-<% end %>
+  <% @tickets.each do |ticket| %>
+    <div><%= ticket['id'] %></div>
+    <div><%= ticket['created_at'].split("T")[0] %></div>
+    <div><%= ticket['created_at'].split("T")[1].split("Z")[0] %></div>
+    <div><%= ticket['subject'] %></div>
+    <div><%= ticket['description'] %></div>
+    <%= link_to "Ticket", ticket_path(ticket['id']) %>
+  <% end %>
 
-<% if @response['previous_page'] == nil %>
-  <%= link_to "Next page", paginate_path(@page_number + 1)  %>
-<% elsif  @response['next_page'] == nil %>
-  <%= link_to "Previous Page", paginate_path(@page_number - 1) %>
-<% else %>
-  <%= link_to "Previous Page", paginate_path(@page_number - 1)%>
-  <%= link_to "Next page" , paginate_path(@page_number + 1)  %>
-<% end %>
+  <% if @response['previous_page'] == nil %>
+    <%= link_to "Next page", paginate_path(@page_number + 1)  %>
+  <% elsif  @response['next_page'] == nil %>
+    <%= link_to "Previous Page", paginate_path(@page_number - 1) %>
+  <% else %>
+    <%= link_to "Previous Page", paginate_path(@page_number - 1)%>
+    <%= link_to "Next page" , paginate_path(@page_number + 1)  %>
+  <% end %>
+</div>

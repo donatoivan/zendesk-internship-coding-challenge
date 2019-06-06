@@ -1,3 +1,4 @@
+<div class="ticket-container <%= render 'tickets/ticket-body', obj: @ticket %>">
 <h1>Ticket No#<%= @ticket['id'] %></h1>
 
 
@@ -9,3 +10,4 @@
 
 
 <%= link_to "Back to Tickets", :back %>
+</div>
