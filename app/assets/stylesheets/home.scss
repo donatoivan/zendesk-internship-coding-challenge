@@ -1,3 +1,69 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home-nav {
+  height: 100px;
+  margin: 0px 100.5px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.home-nav-icon {
+  text-decoration: none;
+  color: #03363d;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-top: 30px;
+}
+
+.welcome-message {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 52px;
+  color: #03363d;
+  margin-bottom: 22px;
+}
+
+.container {
+  height: calc(100vh - 100px);
+  margin: 0px 82.5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content {
+  height: 545px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  height: 600px;
+  width: 500px;
+}
+
+.image-sizing {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.call-to-action-button {
+  width: 150px;
+  height: 60px;
+  background-color: #23aab6;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.sub-heading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: #03363d;
+}
