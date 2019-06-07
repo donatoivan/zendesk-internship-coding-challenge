@@ -1,5 +1,11 @@
 <div class="tickets-container <%= render partial: "layouts/background" %>">
-  <h1>Tickets</h1>
+  <nav class="home-nav">
+    <%# <%= link_to "z", root_path, class: "tickets-nav" %>
+    <a href="/tickets/pages/1" class="tickets-nav-icon">
+       <%= image_tag("zendesk-medium-textless.png", class: "zendesk-icon-sizing") %>
+    </a>
+  </nav>
+  <h1 class="all-tickets-header">Tickets</h1>
 
   <% @tickets.each do |ticket| %>
     <div><%= ticket['id'] %></div>
