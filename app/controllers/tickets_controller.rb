@@ -19,7 +19,7 @@ class TicketsController < ApplicationController
   end
 
   def check_error(response)
-    if (response.code == 404 || response.code == 401)
+    if (response.code == 404 || response.code == 401 || response.code == 503)
       true
     end   
   end
