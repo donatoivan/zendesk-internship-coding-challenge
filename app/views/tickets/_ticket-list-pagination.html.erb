@@ -1,0 +1,14 @@
+<% if obj['previous_page'] == nil %>
+    <div class="pagination-links">
+      <%= link_to "Next page", paginate_path(@page_number + 1), class: "page-links"  %>
+    </div>
+  <% elsif obj['next_page'] == nil %>
+    <div class="pagination-links">
+      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "page-links" %>
+    </div>
+  <% else %>
+    <div class="pagination-links">
+      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "page-links"%>
+      <%= link_to "Next page" , paginate_path(@page_number + 1), class: "page-links"  %>
+    </div>
+  <% end %>

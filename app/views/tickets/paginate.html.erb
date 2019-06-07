@@ -1,20 +1,7 @@
 <div class="tickets-container <%= render partial: "layouts/background" %>">
   <%= render 'tickets/ticket-nav' %>
   <h1 class="all-tickets-header">All Tickets</h1>
-  <% if @response['previous_page'] == nil %>
-    <div class="pagination-links">
-      <%= link_to "Next page", paginate_path(@page_number + 1), class: "pagination-links"  %>
-    </div>
-  <% elsif  @response['next_page'] == nil %>
-    <div class="pagination-links">
-      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "pagination-links" %>
-    </div>
-  <% else %>
-    <div class="pagination-links">
-      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "pagination-links"%>
-      <%= link_to "Next page" , paginate_path(@page_number + 1), class: "pagination-links"  %>
-    </div>
-  <% end %>
+  <%= render 'tickets/ticket-list-pagination', obj: @response  %>
 
   <% @tickets.each do |ticket| %>
     <div class="ticket-box">
@@ -28,12 +15,5 @@
     </div>
   <% end %>
 
-  <% if @response['previous_page'] == nil %>
-    <%= link_to "Next page", paginate_path(@page_number + 1)  %>
-  <% elsif  @response['next_page'] == nil %>
-    <%= link_to "Previous Page", paginate_path(@page_number - 1) %>
-  <% else %>
-    <%= link_to "Previous Page", paginate_path(@page_number - 1)%>
-    <%= link_to "Next page" , paginate_path(@page_number + 1)  %>
-  <% end %>
+  <%= render 'tickets/ticket-list-pagination', obj: @response  %>
 </div>

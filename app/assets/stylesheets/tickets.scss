@@ -47,9 +47,20 @@
   font-family: 'Work Sans', sans-serif;
 }
 
-// .pagination-links {
+.pagination-links {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
 
-// }
+.page-links {
+  text-decoration: none;
+  color: #03363d;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  margin: 0px 20px;
+}
 
 .ticket-box {
   width: 600px;
@@ -62,7 +73,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .ticket-id {
