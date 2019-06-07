@@ -4,10 +4,15 @@
 
 .tickets-container {
   min-height: 100vh;
+  position: relative;
 }
 
 .ticket-container {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 75px;
 }
 
 .green {
@@ -102,5 +107,11 @@
   border-radius: 4px;
 }
 
-
-
+.the-core-of-earth {
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
