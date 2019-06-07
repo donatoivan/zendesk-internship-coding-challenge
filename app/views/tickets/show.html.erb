@@ -1,14 +1,18 @@
 <div class="ticket-container <%= render 'tickets/ticket-body', obj: @ticket %>">
   <%= render 'tickets/ticket-nav' %>
-<h1>Ticket No#<%= @ticket['id'] %></h1>
+  <h1 class="all-tickets-header"><i class="fas fa-lightbulb"></i> Ticket id#<%= @ticket['id'] %></h1>
 
+  <div class="single-ticket-box">
+    <div class="single-ticket-date"><%= @ticket['created_at'].split("T")[0] %></div>
+    <div class="single-ticket-time"><%= @ticket['created_at'].split("T")[1].split("Z")[0] %></div>
+    <div class="single-ticket-subject"><%= @ticket['subject'] %></div>
+    <div class="single-ticket-decription"><%= @ticket['description'] %></div>
+    <ul class="single-ticket-tags">
+      <% @ticket['tags'].each do |tag| %>
+        <li><%= tag %></li>
+      <% end %>
+    </ul>
+  </div>
 
-<div><%= @ticket['id'] %></div>
-<div><%= @ticket['created_at'].split("T")[0] %></div>
-<div><%= @ticket['created_at'].split("T")[1].split("Z")[0] %></div>
-<div><%= @ticket['subject'] %></div>
-<div><%= @ticket['description'] %></div>
-
-
-<%= link_to "Back to Tickets", :back %>
+  <%= link_to "Back to Tickets", :back %>
 </div>
