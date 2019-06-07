@@ -2,22 +2,29 @@
   <%= render 'tickets/ticket-nav' %>
   <h1 class="all-tickets-header">All Tickets</h1>
   <% if @response['previous_page'] == nil %>
-    <%= link_to "Next page", paginate_path(@page_number + 1)  %>
+    <div class="pagination-links">
+      <%= link_to "Next page", paginate_path(@page_number + 1), class: "pagination-links"  %>
+    </div>
   <% elsif  @response['next_page'] == nil %>
-    <%= link_to "Previous Page", paginate_path(@page_number - 1) %>
+    <div class="pagination-links">
+      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "pagination-links" %>
+    </div>
   <% else %>
-    <%= link_to "Previous Page", paginate_path(@page_number - 1)%>
-    <%= link_to "Next page" , paginate_path(@page_number + 1)  %>
+    <div class="pagination-links">
+      <%= link_to "Previous Page", paginate_path(@page_number - 1), class: "pagination-links"%>
+      <%= link_to "Next page" , paginate_path(@page_number + 1), class: "pagination-links"  %>
+    </div>
   <% end %>
 
   <% @tickets.each do |ticket| %>
-    <div>
-      <div><%= ticket['id'] %></div>
-      <div><%= ticket['created_at'].split("T")[0] %></div>
-      <div><%= ticket['created_at'].split("T")[1].split("Z")[0] %></div>
-      <div><%= ticket['subject'] %></div>
-      <div><%= ticket['description'] %></div>
-      <%= link_to "Ticket", ticket_path(ticket['id']) %>
+    <div class="ticket-box">
+      <div class="ticket-id"><i class="fas fa-lightbulb fa-2x"></i><h4>id#<%= ticket['id'] %></h4></div>
+      <div class="duo">
+        <div class="subject">Subject: <%= ticket['subject'].truncate_words(4) %></div>
+        <br>
+        <div class = "description">Description: <%= ticket['description'].truncate_words(5) %></div>
+      </div>
+      <%= link_to "View Ticket", ticket_path(ticket['id']), class: "show-ticket" %>
     </div>
   <% end %>
 

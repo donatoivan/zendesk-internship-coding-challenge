@@ -33,12 +33,12 @@
 .tickets-nav-icon {
   text-decoration: none;
   color: #03363d;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
 .zendesk-icon-sizing {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 30px;
 }
 
 .all-tickets-header {
@@ -46,3 +46,50 @@
   text-align: center;
   font-family: 'Work Sans', sans-serif;
 }
+
+// .pagination-links {
+
+// }
+
+.ticket-box {
+  width: 600px;
+  height: 110px;
+  margin: 0 auto;
+  border: 5px solid #03363d;
+  background-color: rgb(241, 241, 241);
+  color: #03363d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.ticket-id {
+  width: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.duo {
+  width: 330px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.show-ticket {
+  width: 120px;
+  height: 35px;
+  background-color: #03363d;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+
+
