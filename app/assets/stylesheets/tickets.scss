@@ -114,10 +114,55 @@
   border: 5px solid #03363d;
   background-color: rgb(241, 241, 241);
   color: #03363d;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.single-ticket-date {
-  color: #03363d;
+.single-ticket-description {
+  text-align: left;
+  font-size: 15px;
+}
+
+.single-ticket-tags {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px;
+}
+
+.tag-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-tags {
+  border: 1px solid #03363d;
+  height: 25px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.back-to-tickets {
+  width: 120px;
+  height: 35px;
+  background-color: #03363d;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
 .the-core-of-earth {

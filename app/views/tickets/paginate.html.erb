@@ -8,9 +8,9 @@
       <div class="ticket-box">
         <div class="ticket-id"><i class="fas fa-lightbulb fa-2x"></i><h4>id#<%= ticket['id'] %></h4></div>
         <div class="duo">
-          <div class="subject">Subject: <%= ticket['subject'].truncate_words(4) %></div>
+          <div class="subject"><strong>Subject: </strong> <%= ticket['subject'].truncate_words(4) %></div>
           <br>
-          <div class = "description">Description: <%= ticket['description'].truncate_words(5) %></div>
+          <div class = "description"><strong>Description: </strong> <%= ticket['description'].truncate_words(5) %></div>
         </div>
         <%= link_to "View Ticket", ticket_path(ticket['id']), class: "show-ticket" %>
       </div>

@@ -1,6 +1,7 @@
 require 'httparty'
 require 'rails_helper'
 
+
 describe "API testing" , :type => :api do
   before do
     @auth = {:username => Rails.application.credentials.zendesk_api[:username], 

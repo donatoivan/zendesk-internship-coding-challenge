@@ -94,3 +94,11 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+# RSpec.configure do |config|
+#   config.before(:each) do
+#     json_response = File.open("./test/fixtures/tickets.json")
+#     stub_request(:get, "https://donatoivan.zendesk.com/api/v2/tickets.json?").
+#       to_return(status: 200, body: json_response)
+#   end
+# end
