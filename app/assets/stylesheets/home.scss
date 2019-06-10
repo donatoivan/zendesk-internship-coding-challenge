@@ -28,7 +28,8 @@
   height: calc(100vh - 100px);
   margin: 0px 82.5px;
   display: flex;
-  justify-content: space-around;
+  // justify-content: space-around;
+  justify-content: space-between;
 }
 
 .content {
