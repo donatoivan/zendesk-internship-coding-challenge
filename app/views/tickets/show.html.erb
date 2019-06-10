@@ -8,7 +8,7 @@
           #{@ticket['created_at'].split("T")[0].split("-")[1]}/
           #{@ticket['created_at'].split("T")[0].split("-")[0]}" %>
     </div>
-    <p class="single-ticket-subject"><%= @ticket['subject'] %></p>
+    <p class="single-ticket-subject"><strong><%= @ticket['subject'] %></strong></p>
     <p class="single-ticket-description"><%= @ticket['description'] %></p>
     <ul class="single-ticket-tags">
       <li class="tag-header">Tags:</li>
