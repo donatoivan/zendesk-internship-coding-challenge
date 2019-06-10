@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 require 'support/response_helper'
 require 'httparty'
 
@@ -8,8 +8,6 @@ describe "API 404 error testing" , :type => :api do
     @url = "https://donatooivan.zendesk.com/api/v2/tickets.json?"
     @title_msg = "No help desk at donatooivan.zendesk.com"
     @msg_body = "There is no help desk configured at this address. This means that the address is available and that you can claim it at http://www.zendesk.com/signup"
-
-
     json_response = File.open("./test/fixtures/404.json")
     stub_request(:get, "https://donatooivan.zendesk.com/api/v2/tickets.json?").
       with(basic_auth: [Rails.application.credentials.zendesk_api[:username], Rails.application.credentials.zendesk_api[:password] ]).

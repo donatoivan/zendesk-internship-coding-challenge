@@ -1,4 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
+
 describe 'custom not found page' do
   it 'should respond with 404 page' do
     content_404 = "zendesk\nPage Not Found\nOops! We all make mistakes\nThis page may have moved or you might have typed something incorrectly\nBack to Tickets\n404"
