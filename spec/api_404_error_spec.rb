@@ -1,6 +1,5 @@
 require 'rails_helper'
 require 'support/response_helper'
-require 'httparty'
 
 describe "API 404 error testing" , :type => :api do
   include ResponseHelper

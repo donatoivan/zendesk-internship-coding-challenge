@@ -1,6 +1,5 @@
 require 'rails_helper'
 require 'support/response_helper'
-require 'httparty'
 
 describe "testing Zendesk Api" , :type => :api do
   include ResponseHelper
