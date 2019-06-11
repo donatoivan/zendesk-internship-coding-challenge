@@ -71,8 +71,26 @@ $ rails s
 http://localhost:3000
 ```
 
-**Note: You may have a different localhost port number. If so check your terminal after running Rails server **
+**Note: You may have a different localhost port number. If so check your terminal after running Rails server.**
+**Look out for "Listening on tcp://localhost:myportnumber"**
 
+
+## Build Process
+
+### Dependencies
+
+```
+gem 'httparty'
+gem 'webmock'
+gem 'rspec-rails', '~> 3.8'
+```
+
+Apart from all the gems you get from Rails by default, I wanted to minimise the amount of gems that I used in my app.
+I used HTTParty to access the Zendesk Api and retrieve the tickets.
+I used webmock to simulate get request in my Rspec test.
+And I used Rspec for testing.
+
+I removed the database from my application in an attempt to make the app more lightweight. I had to recreate my rails app with the command `rails new zendesk-internship-coding-challenge -O`. This effectively skips ActiveRecord when creating a new application. As I had initially created my app with a database I had to redo it using this command. 
 
 
 * Ruby version
