@@ -5,27 +5,28 @@ This is an application built with Ruby on Rails that accesses the Zendesk Api an
 
 ## Mission Statement
 
-This is my attempt at a solution for Zendesk Internship Coding Cahllenge. I decided to use Ruby on Rails as my framework as it was not only the framework that I'm most familair with, but also I thought that it would be a framework that would require the least amount fo steps to get the project up and going for assessment. 
+This is my attempt at a solution for Zendesk Internship Coding Challenge. 
+I decided to use Ruby on Rails as it is the framework that I'm most familair with. I also thought that it would be a framework that would require the least amount of steps to get the project up and going for assessment. I also removed the database to make rails more lightweight and true to the requirements. My decision to use Rails over Sinatra was due to user experience with regards to setup. Also I love Rails.
 
 ## Assumptions
 
-I am assuming that the person testing this will have `ruby` and `rails` already installed.
+I am assuming that the person testing this will have `Ruby` and `Rails` already installed.
 
-If not these are some steps you can do to to get this up amd running
+If not, here are some steps you can do to get this up amd running:
 
-### Ruby
+### Install Ruby
 
 ```
 $ brew install ruby
 ```
 
-### Rails
+### Install Rails
 
 ```
 $ gem install rails
 ```
 
-If you come come across any issues these are some very comprehensive links to help your setup:
+If you come come across any issues these are some very comprehensive links to help you setup:
 
 #### Ruby
 
@@ -44,7 +45,7 @@ This process will download a copy of the project to run on your local machine.
 ### Clone repository
 
 ```
-$ git@github.com:donatoivan/zendesk-internship-coding-challenge.git
+$ git clone git@github.com:donatoivan/zendesk-internship-coding-challenge.git
 ```
 
 ### Change into directory
@@ -59,11 +60,37 @@ $ cd zendesk-internship-coding-challenge
 $ bundle
 ```
 
-### run rails db create
+### Run Rails server
 
 ```
-$ rails db:create
+$ rails s
 ```
+### Navigate to localhost in your browser
+
+```
+http://localhost:3000
+```
+
+**Note: You may have a different localhost port number. If so check your terminal after running Rails server.**
+**Look out for "Listening on tcp://localhost:myportnumber"**
+
+
+## Build Process
+
+### Dependencies
+
+```
+gem 'httparty'
+gem 'webmock'
+gem 'rspec-rails', '~> 3.8'
+```
+
+Apart from all the gems you get from Rails by default, I wanted to minimise the amount of gems that I used in my app.
+I used HTTParty to access the Zendesk Api and retrieve the tickets.
+I used webmock to simulate get request in my Rspec test.
+And I used Rspec for testing.
+
+I removed the database from my application in an attempt to make the app more lightweight. I had to recreate my rails app with the command `rails new zendesk-internship-coding-challenge -O`. This effectively skips ActiveRecord when creating a new application. As I had initially created my app with a database I had to redo it using this command. 
 
 
 * Ruby version
