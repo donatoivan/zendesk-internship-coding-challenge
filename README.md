@@ -163,7 +163,7 @@ $ rails spec
 ## Credentials
 
 I have saved the Zendesk Api account details and password on my using the Rails 5.2 encrypted credentials in `config/credentials.yml.enc`.
-If you wish to change the account that is used to hit the Zendesk Api you will have to edit it using:
+If you wish to change the account and password that are used to hit the Zendesk Api you will have to edit them using:
 
 ```
 $ EDITOR="code --wait" rails credentials:edit
