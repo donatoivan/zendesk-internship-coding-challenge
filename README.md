@@ -89,7 +89,7 @@ gem 'webmock'
 gem 'rspec-rails', '~> 3.8'
 ```
 
-Apart from all the gems you get from Rails by default, I wanted to minimise the amount of gems that I used in my app.
+Apart from all the gems you get with Rails by default, I wanted to minimise the amount of gems that I used in my app.
 I used HTTParty to access the Zendesk Api and retrieve the tickets.
 I used WebMock to simulate the get request to the Zendesk Api in my Rspec test.
 And I used Rspec for testing.
