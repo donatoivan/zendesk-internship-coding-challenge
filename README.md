@@ -160,6 +160,24 @@ In the app directory, run:
 $ rails spec
 ```
 
+## Credentials
+
+I have saved the Zendesk Api account details and password on my using the Rails 5.2 encrypted credentials in `config/credentials.yml.enc`.
+If you wish to change the account that is used to hit the Zendesk Api you will have to edit it using:
+
+```
+$ EDITOR="code --wait" rails credentials:edit
+
+"code" stands for VSCode. You can supplement that with "atom" for Atom and "subl" for Sublime.
+
+
+For Vim
+
+$ EDITOR="vim" rails credentials:edit
+```
+
+Likewise, you will have to also edit the url that is used in `app/controllers/tickets_controller.rb`
+
 ## Epilogue
 
 I had a lot of fun making this application, learned some cool things along the way and found out that I want to learn more about testing and Rspec.
