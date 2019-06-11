@@ -64,6 +64,13 @@ $ cd zendesk-internship-coding-challenge
 $ bundle
 ```
 
+### Create a master.key file in the config folder. Paste this code. Save.
+
+Beware of any extra whitespace
+
+```
+e4919b7bfd3c0f78c1e7b68ffc85debe
+```
 ### Run Rails server
 
 ```
