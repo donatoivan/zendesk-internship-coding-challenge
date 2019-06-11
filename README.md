@@ -16,18 +16,14 @@ If not these are some steps you can do to to get this up amd running
 ### Ruby
 
 ```
-
 $ brew install ruby
-
 ```
 
 ### Rails
 
-```
-
+`
 $ gem install rails
-
-```
+`
 
 If you come come across any issues these are some very comprehensive links to help your setup:
 
@@ -48,18 +44,12 @@ This process will download a copy of the project to run on your local machine.
 ### Clone repository
 
 ```
-
 $ git@github.com:donatoivan/zendesk-internship-coding-challenge.git
-
 ```
 
 ### Change into directory
 
-```
-
-$ cd zendesk-internship-coding-challenge
-
-```
+```$ cd zendesk-internship-coding-challenge```
 
 ### Run bundle install
 
