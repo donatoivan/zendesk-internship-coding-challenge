@@ -1,0 +1,21 @@
+// Place all the styles related to the errors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.error-heading {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  color: #03363d;
+  margin-bottom: 22px;
+}
+
+.heading-404 {
+  font-size: 200px;
+  color: #03363d;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.image-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

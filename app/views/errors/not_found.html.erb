@@ -1,0 +1,17 @@
+<nav class="home-nav">
+  <%= link_to "zendesk", root_path, class: "home-nav-icon" %>
+</nav>
+<div class="container">
+  <div class="content">
+    <h1 class="error-heading">Page Not Found</h1>
+    <br>
+    <h1 class="error-heading">Oops! We all make mistakes</h1>
+    <p class="sub-heading">
+      This page may have moved or you might have typed something incorrectly
+    </p>
+    <%= link_to "Back to Tickets", paginate_path(1), class: "call-to-action-button" %>
+  </div>
+  <div class="image-404">
+    <h1 class="heading-404">404</h1>
+  </div>
+</div>

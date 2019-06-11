@@ -1,0 +1,175 @@
+// Place all the styles related to the tickets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tickets-container {
+  min-height: 100vh;
+  position: relative;
+}
+
+.ticket-container {
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 75px;
+}
+
+.green {
+  background-color: #c8de72;
+}
+
+.pink {
+  background-color: #f8a4b3;
+}
+
+.orange {
+  background-color: #f7bf7f;
+}
+
+.blue {
+  background-color: #b6e1f3;
+}
+
+.blood-orange {
+  background-color: #f8b8af;
+}
+
+.tickets-nav-icon {
+  text-decoration: none;
+  color: #03363d;
+  margin-top: 35px;
+}
+
+.zendesk-icon-sizing {
+  height: 25px;
+  width: 30px;
+}
+
+.all-tickets-header {
+  color: #03363d;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.pagination-links {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.page-links {
+  text-decoration: none;
+  color: #03363d;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  margin: 0px 20px;
+}
+
+.ticket-box {
+  width: 600px;
+  height: 110px;
+  margin: 0 auto;
+  border: 5px solid #03363d;
+  background-color: rgb(241, 241, 241);
+  color: #03363d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.ticket-id {
+  width: 90px;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.duo {
+  width: 330px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.show-ticket {
+  width: 120px;
+  height: 35px;
+  background-color: #03363d;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.single-ticket-box {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+  border: 5px solid #03363d;
+  background-color: rgb(241, 241, 241);
+  color: #03363d;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.single-ticket-description {
+  text-align: left;
+  font-size: 15px;
+}
+
+.single-ticket-tags {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px;
+}
+
+.tag-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-tags {
+  border: 1px solid #03363d;
+  height: 25px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.back-to-tickets {
+  width: 120px;
+  height: 35px;
+  background-color: #03363d;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.the-core-of-earth {
+  height: 75px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

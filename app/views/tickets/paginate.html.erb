@@ -1,0 +1,20 @@
+<div class="tickets-container <%= render partial: "layouts/background" %>">
+  <div class="content-wrap">
+    <%= render 'tickets/ticket-nav' %>
+    <h1 class="all-tickets-header">All Tickets</h1>
+    <%= render 'tickets/ticket-list-pagination', obj: @response  %>
+
+    <% @tickets.each do |ticket| %>
+      <div class="ticket-box">
+        <div class="ticket-id"><i class="fas fa-lightbulb fa-2x"></i><h4>id#<%= ticket['id'] %></h4></div>
+        <div class="duo">
+          <div class="subject"><strong>Subject: </strong> <%= ticket['subject'].truncate_words(4) %></div>
+          <br>
+          <div class = "description"><strong>Description: </strong> <%= ticket['description'].truncate_words(5) %></div>
+        </div>
+        <%= link_to "View Ticket", ticket_path(ticket['id']), class: "show-ticket" %>
+      </div>
+    <% end %>
+  </div>
+  <%= render 'layouts/bottom_nav.html.erb' %>
+</div>
