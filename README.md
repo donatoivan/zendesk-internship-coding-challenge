@@ -21,9 +21,9 @@ $ brew install ruby
 
 ### Rails
 
-`
+```
 $ gem install rails
-`
+```
 
 If you come come across any issues these are some very comprehensive links to help your setup:
 
@@ -49,22 +49,20 @@ $ git@github.com:donatoivan/zendesk-internship-coding-challenge.git
 
 ### Change into directory
 
-```$ cd zendesk-internship-coding-challenge```
+```
+$ cd zendesk-internship-coding-challenge
+```
 
 ### Run bundle install
 
 ```
-
 $ bundle
-
 ```
 
 ### run rails db create
 
 ```
-
 $ rails db:create
-
 ```
 
 
