@@ -2,7 +2,13 @@ class TicketsController < ApplicationController
   include HTTParty
   
   def paginate
-    @page_number = params[:id].to_i
+
+    if (params[:id].to_i < 1) || (all_digits(params[:id]) == false)
+      raise ActionController::RoutingError.new('not_found')
+    else
+      @page_number = params[:id].to_i
+    end
+
     @response = HTTParty.get("https://donatoivan.zendesk.com/api/v2/tickets.json?page=#{@page_number}&per_page=25",
                       basic_auth: credentials)
 
@@ -13,6 +19,7 @@ class TicketsController < ApplicationController
     elsif check_error(@response) 
       render :error
     end
+    
   end
 
   def show
@@ -36,5 +43,9 @@ class TicketsController < ApplicationController
     if (response.code == 404 || response.code == 401 || response.code == 503)
       true
     end   
+  end
+
+  def all_digits(str)
+    str[/[0-9]+/] == str
   end
 end
