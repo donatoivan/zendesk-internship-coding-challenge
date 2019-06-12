@@ -6,7 +6,7 @@ This is an application built with Ruby on Rails that accesses the Zendesk Api an
 ## Mission Statement
 
 This is my attempt at a solution for the Zendesk Internship Coding Challenge. 
-I decided to use Ruby on Rails as it is the framework that I'm most familair with. It also, in my opinion, takes the least amount of steps to setup for the assessor. 
+I decided to use Ruby on Rails as it is the framework that I'm most familair with. It also, in my opinion, takes the least amount of steps for the assessor to setup. 
 I also removed the database that generally comes with a Rails App to make it more lightweight and true to the requirements. 
 My decision to use Rails over Sinatra was again to enhance user experience through ease of setup. Also I love Rails.
 
