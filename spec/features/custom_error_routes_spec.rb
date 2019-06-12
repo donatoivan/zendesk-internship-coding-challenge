@@ -11,7 +11,7 @@ end
 describe 'custom internal error page' do 
   it 'should respond with 500 page' do
     content_500 = "We're sorry, but something went wrong.\nIf you are the application owner check the logs for more information."
-    visit "/500"
+    visit '/500'
     expect(page).to have_content(content_500)
   end
 end
