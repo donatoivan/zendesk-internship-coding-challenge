@@ -181,6 +181,8 @@ $ EDITOR="code --wait" rails credentials:edit
 For Vim
 
 $ EDITOR="vim" rails credentials:edit
+
+Note: When you run this command it takes between 5 and 20 seconds to open the file
 ```
 
 Likewise, you will have to also edit the url that is used in `app/controllers/tickets_controller.rb`
